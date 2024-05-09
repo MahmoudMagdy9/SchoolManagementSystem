@@ -1,0 +1,83 @@
+﻿<Window x:Class="SchoolManagementSystem.View.Calculator"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SchoolManagementSystem.View" xmlns:viewmodel="clr-namespace:SchoolManagementSystem.ViewModel" d:DataContext="{d:DesignInstance Type=viewmodel:VMCalculator}"
+        mc:Ignorable="d"
+        Title="Calculator"  Icon="/Assets/Images/calculator.png" Background="#000000" Height="600" Width="500"  WindowStartupLocation="CenterScreen">
+
+
+    <Grid Margin="5, 5, 5, 15">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <Grid Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="6" Margin="5,5,5,10">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="2*"/>
+            </Grid.RowDefinitions>
+
+            <TextBox Background="Black" BorderBrush="#a5a5a5" BorderThickness="3"   Foreground="Blue" HorizontalAlignment="Stretch" VerticalAlignment="Top" FontSize="60" x:Name="txtresult" Height="141" Grid.RowSpan="2">
+                <TextBox.Resources>
+                    <Style TargetType="{x:Type TextBox}">
+                        <Setter Property="Template">
+                            <Setter.Value>
+                                <ControlTemplate TargetType="{x:Type TextBox}">
+                                    <Border CornerRadius="10" Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}">
+                                        <ScrollViewer x:Name="PART_ContentHost" Focusable="false" HorizontalScrollBarVisibility="Hidden" VerticalScrollBarVisibility="Hidden"/>
+                                    </Border>
+                                    <ControlTemplate.Triggers>
+                                        <Trigger Property="IsEnabled" Value="false">
+                                            <Setter Property="Opacity" TargetName="PART_ContentHost" Value="0.56"/>
+                                        </Trigger>
+                                    </ControlTemplate.Triggers>
+                                </ControlTemplate>
+                            </Setter.Value>
+                        </Setter>
+                    </Style>
+                </TextBox.Resources>
+            </TextBox>
+        </Grid>
+
+
+        <Button Grid.Column="2" Grid.Row="1" Style="{StaticResource greyButton}" Content="&#x27f5;" Click="ClearOne_Click"/>
+        <Button Grid.Column="2" Grid.Row="2" Style="{StaticResource darkGreyButton}" Content="7" CommandParameter="7" Click="seven_click"/>
+        <Button Grid.Column="2" Grid.Row="3" Style="{StaticResource darkGreyButton}" Content="4" CommandParameter="4" Click="four_Click"/>
+        <Button Grid.Column="2" Grid.Row="4" Style="{StaticResource darkGreyButton}" Content="1"  Click="one_Click"/>
+        <Button Grid.Column="2" Grid.Row="5" Grid.ColumnSpan="2" Style="{StaticResource darkGreyButton}" Content="0" CommandParameter="0" Click="zero_click"/>
+
+        <Button Grid.Column="3" Grid.Row="1" Style="{StaticResource greyButton}" Content="CE" Click="clearEntry_Click"/>
+        <Button Grid.Column="3" Grid.Row="2" Style="{StaticResource darkGreyButton}" Content="8" CommandParameter="8" Click="eight_click"/>
+        <Button Grid.Column="3" Grid.Row="3" Style="{StaticResource darkGreyButton}" Content="5" CommandParameter="5" Click="five_Click"/>
+        <Button Grid.Column="3" Grid.Row="4" Style="{StaticResource darkGreyButton}" Content="2" CommandParameter="2" Click="two_Click"/>
+
+        <Button Grid.Column="4" Grid.Row="1" Style="{StaticResource greyButton}" Content="C" Click="clear_Click"/>
+        <Button Grid.Column="4" Grid.Row="2" Style="{StaticResource darkGreyButton}" Content="9" CommandParameter="9" Click="nine_click"/>
+        <Button Grid.Column="4" Grid.Row="3" Style="{StaticResource darkGreyButton}" Content="6" CommandParameter="6" Click="six_click"/>
+        <Button Grid.Column="4" Grid.Row="4" Style="{StaticResource darkGreyButton}" Content="3" CommandParameter="3" Click="three_Click"/>
+        <Button Grid.Column="4" Grid.Row="5" Style="{StaticResource darkGreyButton}" Content="." CommandParameter="." Click="dot_click" />
+
+        <Button Grid.Column="5" Grid.Row="1" Content="!" CommandParameter="!" IsDefault="True" Style="{StaticResource orangeButton}" Click="Factorial_Click"/>
+        <Button Grid.Column="5" Grid.Row="2" Content="/" CommandParameter="/" Style="{StaticResource orangeButton}" Click="Operator_Click" />
+        <Button Grid.Column="5" Grid.Row="3" Content="*" CommandParameter="*" Style="{StaticResource orangeButton}" Click="Operator_Click"/>
+        <Button Grid.Column="5" Grid.Row="4" Content="-" CommandParameter="-" Style="{StaticResource orangeButton}" Click="Operator_Click"/>
+        <Button Grid.Column="5" Grid.Row="5" Content="+" CommandParameter="+" Style="{StaticResource orangeButton}" Click="Operator_Click"/>
+
+        <Button Grid.Column="0" Grid.Row="1" Content="=" CommandParameter="=" Style="{StaticResource blueButton}" Grid.ColumnSpan="2" Margin="3,3,2,3" Grid.RowSpan="5" Click="Equal_Click"/>
+    </Grid>
+</Window>

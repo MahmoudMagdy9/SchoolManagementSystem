@@ -1,0 +1,85 @@
+﻿<UserControl x:Class="SchoolManagementSystem.View.CEISubjects"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:SchoolManagementSystem.View"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <Button Content="C++" Grid.Column="0" Grid.Row="0" Width="200" Height="120" Style="{StaticResource blueButton}">
+            <Button.ToolTip>
+                <ToolTip>
+                    <StackPanel>
+                        <TextBlock FontWeight="Bold" Text="C++" />
+                        <TextBlock Text="a programming language by Eng Mohey" />
+                    </StackPanel>
+                </ToolTip>
+            </Button.ToolTip>
+        </Button>
+        <Button Content="OOP" Grid.Column="1" Grid.Row="0" Width="200" Height="120" Style="{StaticResource greyButton}">
+            <Button.ToolTip>
+                <ToolTip>
+                    <StackPanel>
+                        <TextBlock FontWeight="Bold" Text="OOP" />
+                        <TextBlock Text="object oriented programming with Eng Ouf" />
+                    </StackPanel>
+                </ToolTip>
+            </Button.ToolTip>
+        </Button>
+
+        <Button Content="Database" Grid.Column="0" Grid.Row="1" Width="200" Height="120" Style="{StaticResource orangeButton}">
+            <Button.ToolTip>
+                <ToolTip>
+                    <StackPanel>
+                        <TextBlock FontWeight="Bold" Text="DB" />
+                        <TextBlock Text="SQL Server Database with Eng Ahmed Adel" />
+                    </StackPanel>
+                </ToolTip>
+            </Button.ToolTip>
+        </Button>
+        <Button Content="Network" Grid.Column="1" Grid.Row="1" Width="200" Height="120" Style="{StaticResource blueButton}">
+            <Button.ToolTip>
+                <ToolTip>
+                    <StackPanel>
+                        <TextBlock FontWeight="Bold" Text="Network" />
+                        <TextBlock Text="Computer Network with Dr Adly" />
+                    </StackPanel>
+                </ToolTip>
+            </Button.ToolTip>
+        </Button>
+
+        <Button Content="Data Structure" Grid.Column="0" Grid.Row="2" Width="200" Height="120" Style="{StaticResource greyButton}">
+            <Button.ToolTip>
+                <ToolTip>
+                    <StackPanel>
+                        <TextBlock FontWeight="Bold" Text="Data Structure" />
+                        <TextBlock Text="Data Structure and Alogrithms with Eng Mohey" />
+                    </StackPanel>
+                </ToolTip>
+            </Button.ToolTip>
+        </Button>
+        <Button Content="Revit API"  Grid.Column="1" Grid.Row="2" Width="200" Height="120" Style="{StaticResource orangeButton}">
+            <Button.ToolTip>
+                <ToolTip>
+                    <StackPanel>
+                        <TextBlock FontWeight="Bold" Text="Revit API" />
+                        <TextBlock Text="Revit API with Eng Ahemd Gameel" />
+                    </StackPanel>
+                </ToolTip>
+            </Button.ToolTip>
+        </Button>
+
+
+    </Grid>
+</UserControl>
