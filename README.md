@@ -19,7 +19,7 @@ This application aims to streamline various school management tasks, including s
 
 To get started with the School Management System, follow these steps:
 
-1. **Clone the Repository**: Clone this repository to your local machine using `git clone https://github.com/yourusername/school-management-system.git`.
+1. **Clone the Repository**: Clone this repository to your local machine using `git clone https://github.com/MahmoudMagdy9/SchoolManagementSystem.git`.
 2. **Build the Solution**: Open the solution file in Visual Studio and build the solution to ensure all dependencies are resolved.
 3. **Run the Application**: Launch the application within Visual Studio or build the project and run the executable file to start using the School Management System.
 
